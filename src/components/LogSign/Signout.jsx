@@ -121,7 +121,7 @@ const Sign = () => {
                     onChange={(e) => setData(prev => ({
                         ...prev, password: e.target.value
                     }))}
-                    value={data.password}></input>{<img className={styles.img} src="/public/glaz.png" onClick={onClick} width="25px" height="25px"/>}
+                    value={data.password}></input>{<img className={styles.img} src={glaz} onClick={onClick} width="25px" height="25px"/>}
                 </div></> : 
                 <>
                 <input 
