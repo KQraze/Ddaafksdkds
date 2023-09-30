@@ -1,0 +1,32 @@
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navlist {
+    display: flex;
+    flex-direction: row;
+
+    margin-right: 30px;
+
+    list-style-type: none;
+    
+}
+
+.navitem {
+    margin: 10px;
+    color: white;
+    font-family: 'Comfortaa', sans-serif;
+    font-weight: 500;
+
+}
+
+.navlink {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.navlink:hover {
+    color: rgb(255, 203, 203);
+}

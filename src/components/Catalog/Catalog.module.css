@@ -1,0 +1,53 @@
+.section {
+    background-color: rgb(255, 255, 255);
+    height: auto;
+}
+
+.dh1 {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgb(255, 235, 235);
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.304);
+    
+}
+
+.h1 {
+    font-family: 'Comfortaa', cursive;
+    color: rgb(255, 110, 110);
+    font-size: 40px;
+    font-weight: 900;
+
+    padding: 20px 20px 10px 20px;
+    margin-left: 20px;
+
+}
+
+.h2 {
+    font-family: 'Comfortaa', cursive;
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    font-weight: 900;
+
+    padding: 10px 10px 10px 10px;
+    margin-left: 20px;
+}
+
+.hr {
+    border: 1px solid rgba(0, 0, 0, 0.114);
+}
+
+.warningblock {
+    display: flex;
+    justify-content: center;
+
+    margin: 20px 0 0px 0;
+}
+
+.warning {
+    font-family: 'Comfortaa', cursive;
+    color: rgb(255, 0, 0);
+    font-size: 30px;
+}
