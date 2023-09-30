@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import ReactDOM from "react-dom";
 import styles from './Signout.module.css'
 import Header from "../Home/header/Header";
 import { Link, Navigate } from "react-router-dom";

@@ -1,7 +1,6 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
 import styles from "./BasketBlock.module.css";
 import axios from "axios";
-import { ProductService } from "../../../services/get.service";
 import { AuthContext } from "../../../Providers/AuthProvider";
 import { Link, Navigate, useNavigate } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";

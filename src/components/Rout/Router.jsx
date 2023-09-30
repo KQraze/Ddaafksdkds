@@ -6,7 +6,6 @@ import Basket from "../Basket/Basket";
 import Orders from "../PlacedOrders/PlacedOrders";
 import Header from "../Home/header/Header";
 import styles from './Router.module.css'
-import { CSSTransition } from "react-transition-group";
 
 const Router = () => {
     return (
