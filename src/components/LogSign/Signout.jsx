@@ -4,7 +4,7 @@ import styles from './Signout.module.css'
 import Header from "../Home/header/Header";
 import { Link, Navigate } from "react-router-dom";
 import axios from "axios";
-import glaz from "/public/glaz.png"
+import Glaz from "/public/glaz.png"
 import { toast, ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -121,7 +121,7 @@ const Sign = () => {
                     onChange={(e) => setData(prev => ({
                         ...prev, password: e.target.value
                     }))}
-                    value={data.password}></input>{<img className={styles.img} src={glaz} onClick={onClick} width="25px" height="25px"/>}
+                    value={data.password}></input>{<img className={styles.img} src={Glaz} onClick={onClick} width="25px" height="25px"/>}
                 </div></> : 
                 <>
                 <input 
@@ -151,7 +151,7 @@ const Sign = () => {
                     onChange={(e) => setData(prev => ({
                         ...prev, password: e.target.value
                     }))}
-                    value={data.password}></input>{<img className={styles.img} src="/public/glaz.png" onClick={onClick} width="25px" height="25px"/>}
+                    value={data.password}></input>{<img className={styles.img} src={Glaz} onClick={onClick} width="25px" height="25px"/>}
                 </div>
                 </>
                 
