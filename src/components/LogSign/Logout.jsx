@@ -74,21 +74,23 @@ const Log = () => {
             {errors === 401 || errors === 422 ? 
             
             <input
-            style={
-                {
-                transition: 'all 0.2s ease',
-                border: '2px solid #ff4f4f',
-                boxShadow: '0px 0px 8px 0px #ff4f4f',
+                style={
+                    {
+                    transition: 'all 0.2s ease',
+                    border: '2px solid #ff4f4f',
+                    boxShadow: '0px 0px 8px 0px #ff4f4f',
+                    }
                 }
-            }
-            id="email"
-            type="email"
-            className={styles.input}
-            placeholder="Введите E-mail"
-            onChange={(e) => setData(prev => ({
-                ...prev, email: e.target.value
-            }))}
-            />
+                type="email"
+                className={styles.input}
+                placeholder="Пример: catbest001@gmail.com" 
+                onChange={(e) => setData(prev => ({
+                    ...prev, email: e.target.value
+                }))}
+                value={data.email}
+                />
+
+                
 
              : 
 
@@ -104,23 +106,36 @@ const Log = () => {
 
             }
 
-            {errors === 401 || errors === 422 ? 
+            {errors === 401 || errors === 422 ? <>
             <div 
-            style={{
-                transition: 'all 0.2s ease',
-                border: '2px solid #ff4f4f',
-                boxShadow: '0px 0px 8px 0px #ff4f4f',
-            }}
+            style={
+            {
+            transition: 'all 0.2s ease',
+            border: '2px solid #ff4f4f',
+            boxShadow: '0px 0px 8px 0px #ff4f4f',
+            }
+            }
             className={styles.visible}>
-                    <input
-                    type={type}
-                    className={styles.inputpass}
-                    placeholder="Введите пароль"
-                    onChange={(e) => setData(prev => ({
-                        ...prev, password: e.target.value
-                    }))}
-                    value={data.password}></input>{<img className={styles.img} src={Glaz} onClick={onClick} width="25px" height="25px"/>}
-                </div> 
+                <input 
+                type={type}
+                className={styles.inputpass}
+                placeholder="Пример: CatBest001"
+                onChange={(e) => setData(prev => ({
+                    ...prev, password: e.target.value
+                }))}
+                value={data.password}></input>{<img className={styles.img} src={Glaz} onClick={onClick} width="25px" height="25px"/>}
+            </div>
+            <p align="center" style={
+                {
+                    transition: 'all 0.2s ease',
+                    fontFamily: 'Comfortaa',
+                    fontSize: '13px',
+                    fontWeight: 'bold',
+                    color: '#8B0000'
+                }
+            }>
+                Пароль должен состоять из 8 символов и иметь хотя бы одну заглав. букву и цифру!
+            </p></>
                 :
                 <div className={styles.visible}>
                     <input 

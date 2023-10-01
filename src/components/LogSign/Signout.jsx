@@ -80,7 +80,7 @@ const Sign = () => {
                     }
                 }
                 className={styles.input}
-                placeholder="Введите ФИО"
+                placeholder="Пример: Иванов Иван Иванович"
                 onChange={(e) => setData(prev => ({
                     ...prev, fio: e.target.value
                 }))}
@@ -97,13 +97,14 @@ const Sign = () => {
                 }
                 type="email"
                 className={styles.input}
-                placeholder="Введите E-mail" 
+                placeholder="Пример: catbest001@gmail.com" 
                 onChange={(e) => setData(prev => ({
                     ...prev, email: e.target.value
                 }))}
                 value={data.email}
                 />
-
+                
+                
                 <div 
                 style={
                 {
@@ -116,12 +117,35 @@ const Sign = () => {
                     <input 
                     type={type}
                     className={styles.inputpass}
-                    placeholder="Введите пароль"
+                    placeholder="Пример: CatBest001"
                     onChange={(e) => setData(prev => ({
                         ...prev, password: e.target.value
                     }))}
                     value={data.password}></input>{<img className={styles.img} src={Glaz} onClick={onClick} width="25px" height="25px"/>}
-                </div></> : 
+                </div>
+                <p align="center" style={
+                    {
+                        transition: 'all 0.2s ease',
+                        fontFamily: 'Comfortaa',
+                        fontSize: '13px',
+                        fontWeight: 'bold',
+                        color: '#8B0000'
+                    }
+                }>
+                    Пароль должен состоять из 8 символов и иметь хотя бы одну заглав. букву и цифру!
+                </p>
+                <p align="center" style={
+                    {
+                        transition: 'all 0.2s ease',
+                        fontFamily: 'Comfortaa',
+                        fontSize: '13px',
+                        fontWeight: 'bold',
+                        color: 'grey'
+                    }
+                }>
+                    Если всё введено корректно, то возможно почта уже занята!
+                </p>
+                </> : 
                 <>
                 <input 
                 className={styles.input}
@@ -170,7 +194,7 @@ const Sign = () => {
                 </Link>
 
             </form>
-            {response && (
+            {!!response && (
                 <>
                 <p>
                     Данные успешно отправлены
