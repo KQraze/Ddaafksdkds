@@ -15,7 +15,7 @@ const Catalog = () => {
                 </span>
 
             </div>
-                {!!response ? null : <div className={styles.warningblock}><span className={styles.warning}>Для того, чтобы добавить товар в корзину, авторизуйтесь!</span></div>}  
+                {!!response ? null : <div className={styles.warningblock}><span className={styles.warning}>Для того, чтобы совершать действия на сайте, авторизуйтесь!</span></div>}  
 
                 <Product />
 

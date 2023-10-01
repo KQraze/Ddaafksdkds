@@ -17,6 +17,7 @@ const Pitem = ({ data }) => {
 
     const {baskets, setBaskets} = useContext(AuthContext)
 
+    baskets.map(basket => basket.count = 1)
 
 
     const headers = {
@@ -24,7 +25,7 @@ const Pitem = ({ data }) => {
         "Authorization": `Bearer ${response.user_token !== null ? response.user_token : " "}`
     }
     
-    const AddBitem = e => {
+    const AddBitem = (id, e) => {
         e.preventDefault();
         axios.post(`https://jurapro.bhuser.ru/api-shop/cart/${data.id}`, {
         },
@@ -37,6 +38,7 @@ const Pitem = ({ data }) => {
             if (responses.status === 201) {
                 alert(responses.data.data.message);
             }
+            data.id === id ? baskets.map(basket => basket.product_id === id ? basket.count = basket.count + 1 : {}) : undefined
         })
         .catch((error) => {
             console.log(error);
@@ -64,7 +66,7 @@ const Pitem = ({ data }) => {
         </div>
         {!!response ? <button 
         className={styles.btn}
-        onClick={(e) => {AddBitem(e)}}>
+        onClick={(e) => {AddBitem(data.id, e)}}>
             Добавить в корзину
         </button>: <></>}
     </div>
